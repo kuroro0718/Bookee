@@ -1,0 +1,6 @@
+framework module Pods_BookeeFinalExame {
+  umbrella header "Pods-BookeeFinalExame-umbrella.h"
+
+  export *
+  module * { export * }
+}
