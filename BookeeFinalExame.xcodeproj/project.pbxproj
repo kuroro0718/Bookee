@@ -20,6 +20,7 @@
 		EBB584331DA797160098B9C3 /* BookCoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB584321DA797160098B9C3 /* BookCoverViewController.swift */; };
 		EBB584351DA79A230098B9C3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBB584341DA79A230098B9C3 /* MapKit.framework */; };
 		EBB584371DA79A330098B9C3 /* ShopMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB584361DA79A330098B9C3 /* ShopMapViewController.swift */; };
+		EBB584391DA79FD70098B9C3 /* ShopWebSiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB584381DA79FD70098B9C3 /* ShopWebSiteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		EBB584321DA797160098B9C3 /* BookCoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookCoverViewController.swift; sourceTree = "<group>"; };
 		EBB584341DA79A230098B9C3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		EBB584361DA79A330098B9C3 /* ShopMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopMapViewController.swift; sourceTree = "<group>"; };
+		EBB584381DA79FD70098B9C3 /* ShopWebSiteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopWebSiteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				EBB584301DA78CC00098B9C3 /* CreateBookTableViewController.swift */,
 				EBB584321DA797160098B9C3 /* BookCoverViewController.swift */,
 				EBB584141DA76C100098B9C3 /* Main.storyboard */,
+				EBB584381DA79FD70098B9C3 /* ShopWebSiteViewController.swift */,
 				EBB584361DA79A330098B9C3 /* ShopMapViewController.swift */,
 				EBB584171DA76C100098B9C3 /* Assets.xcassets */,
 				EBB584191DA76C100098B9C3 /* LaunchScreen.storyboard */,
@@ -246,6 +249,7 @@
 				EBB584311DA78CC00098B9C3 /* CreateBookTableViewController.swift in Sources */,
 				EBB584251DA771400098B9C3 /* Book.swift in Sources */,
 				EBB5842F1DA783EC0098B9C3 /* BookDetailTableViewController.swift in Sources */,
+				EBB584391DA79FD70098B9C3 /* ShopWebSiteViewController.swift in Sources */,
 				EBB584371DA79A330098B9C3 /* ShopMapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -45,6 +45,11 @@ class BookDetailTableViewController: UITableViewController {
                 let vc = segue.destinationViewController as! ShopMapViewController
                 vc.address = shopAddrLabel.text
                 vc.shopName = bookNameLabel.text
+            case "shopWebIdentifier":
+                let vc = segue.destinationViewController as! ShopWebSiteViewController
+                let urlString = shopWebSiteLabel.text?.characters.split{$0 == " "}.map(String.init)
+                
+                vc.url = NSURL(string: (urlString?.last!)!)
             default:
                 break
             }
