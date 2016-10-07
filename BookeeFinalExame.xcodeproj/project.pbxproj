@@ -12,9 +12,9 @@
 		EBB584161DA76C100098B9C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBB584141DA76C100098B9C3 /* Main.storyboard */; };
 		EBB584181DA76C100098B9C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBB584171DA76C100098B9C3 /* Assets.xcassets */; };
 		EBB5841B1DA76C100098B9C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBB584191DA76C100098B9C3 /* LaunchScreen.storyboard */; };
-		EBB584231DA76CF90098B9C3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EBB584221DA76CF90098B9C3 /* GoogleService-Info.plist */; };
 		EBB584251DA771400098B9C3 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB584241DA771400098B9C3 /* Book.swift */; };
 		EBB584271DA771D10098B9C3 /* BookTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB584261DA771D10098B9C3 /* BookTableViewController.swift */; };
+		EBB584291DA778720098B9C3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EBB584281DA778720098B9C3 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,9 +27,9 @@
 		EBB584171DA76C100098B9C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EBB5841A1DA76C100098B9C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EBB5841C1DA76C100098B9C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EBB584221DA76CF90098B9C3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EBB584241DA771400098B9C3 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		EBB584261DA771D10098B9C3 /* BookTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTableViewController.swift; sourceTree = "<group>"; };
+		EBB584281DA778720098B9C3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,8 +88,8 @@
 				EBB584141DA76C100098B9C3 /* Main.storyboard */,
 				EBB584171DA76C100098B9C3 /* Assets.xcassets */,
 				EBB584191DA76C100098B9C3 /* LaunchScreen.storyboard */,
+				EBB584281DA778720098B9C3 /* GoogleService-Info.plist */,
 				EBB5841C1DA76C100098B9C3 /* Info.plist */,
-				EBB584221DA76CF90098B9C3 /* GoogleService-Info.plist */,
 			);
 			path = BookeeFinalExame;
 			sourceTree = "<group>";
@@ -158,7 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBB5841B1DA76C100098B9C3 /* LaunchScreen.storyboard in Resources */,
-				EBB584231DA76CF90098B9C3 /* GoogleService-Info.plist in Resources */,
+				EBB584291DA778720098B9C3 /* GoogleService-Info.plist in Resources */,
 				EBB584181DA76C100098B9C3 /* Assets.xcassets in Resources */,
 				EBB584161DA76C100098B9C3 /* Main.storyboard in Resources */,
 			);
