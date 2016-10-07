@@ -13,6 +13,9 @@ class BookTableViewController: UITableViewController {
 
     var books = [Book]()
     
+    
+    @IBOutlet var bookTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         FIRApp.configure()
@@ -77,5 +80,14 @@ class BookTableViewController: UITableViewController {
         cell.imageView?.image = UIImage(named: books[indexPath.row].imageName!)
         
         return cell
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showBookDetail" {
+            let vc = segue.destinationViewController as! BookDetailTableViewController
+            if let cell = sender as? UITableViewCell, let indexPath = bookTableView.indexPathForCell(cell) {
+                vc.book = books[indexPath.row]
+            }
+        }
     }
 }

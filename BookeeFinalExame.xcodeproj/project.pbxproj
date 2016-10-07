@@ -15,6 +15,7 @@
 		EBB584251DA771400098B9C3 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB584241DA771400098B9C3 /* Book.swift */; };
 		EBB584271DA771D10098B9C3 /* BookTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB584261DA771D10098B9C3 /* BookTableViewController.swift */; };
 		EBB584291DA778720098B9C3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EBB584281DA778720098B9C3 /* GoogleService-Info.plist */; };
+		EBB5842F1DA783EC0098B9C3 /* BookDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB5842E1DA783EC0098B9C3 /* BookDetailTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		EBB584241DA771400098B9C3 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		EBB584261DA771D10098B9C3 /* BookTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTableViewController.swift; sourceTree = "<group>"; };
 		EBB584281DA778720098B9C3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EBB5842E1DA783EC0098B9C3 /* BookDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookDetailTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +85,9 @@
 			isa = PBXGroup;
 			children = (
 				EBB584101DA76C100098B9C3 /* AppDelegate.swift */,
-				EBB584261DA771D10098B9C3 /* BookTableViewController.swift */,
 				EBB584241DA771400098B9C3 /* Book.swift */,
+				EBB584261DA771D10098B9C3 /* BookTableViewController.swift */,
+				EBB5842E1DA783EC0098B9C3 /* BookDetailTableViewController.swift */,
 				EBB584141DA76C100098B9C3 /* Main.storyboard */,
 				EBB584171DA76C100098B9C3 /* Assets.xcassets */,
 				EBB584191DA76C100098B9C3 /* LaunchScreen.storyboard */,
@@ -222,6 +225,7 @@
 				EBB584111DA76C100098B9C3 /* AppDelegate.swift in Sources */,
 				EBB584271DA771D10098B9C3 /* BookTableViewController.swift in Sources */,
 				EBB584251DA771400098B9C3 /* Book.swift in Sources */,
+				EBB5842F1DA783EC0098B9C3 /* BookDetailTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
