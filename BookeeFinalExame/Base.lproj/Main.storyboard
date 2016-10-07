@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -41,7 +42,13 @@
                             <outlet property="delegate" destination="HmM-N5-BAN" id="I58-7m-I3n"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="dPG-Jx-H9J"/>
+                    <navigationItem key="navigationItem" id="dPG-Jx-H9J">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="b9C-wv-KLo">
+                            <connections>
+                                <segue destination="d5g-dT-rfU" kind="show" identifier="addNewBookIdentifier" id="OAa-AG-L5R"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="bookTableView" destination="RgT-1C-moJ" id="dTb-GD-eBb"/>
                     </connections>
@@ -49,6 +56,190 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mFX-Jp-dwz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1191.2" y="-153.37331334332833"/>
+        </scene>
+        <!--Create Book Table View Controller-->
+        <scene sceneID="d7f-MV-6CG">
+            <objects>
+                <tableViewController id="d5g-dT-rfU" customClass="CreateBookTableViewController" customModule="BookeeFinalExame" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="UTm-JU-F4X">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="haL-LD-F6f">
+                            <rect key="frame" x="0.0" y="328" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="新增書本"/>
+                            <connections>
+                                <action selector="addBookButtonPressed:" destination="d5g-dT-rfU" eventType="touchUpInside" id="UMM-Ek-aek"/>
+                            </connections>
+                        </button>
+                        <sections>
+                            <tableViewSection id="gej-QU-8tv">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="oyk-gc-ZAJ" style="IBUITableViewCellStyleDefault" id="wVe-V2-wKA">
+                                        <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wVe-V2-wKA" id="aaX-Uw-1tz">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="書名" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oyk-gc-ZAJ">
+                                                    <frame key="frameInset" minX="15" width="345" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PAg-zQ-A3v">
+                                                    <frame key="frameInset" minX="139" minY="6" width="228" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="X0X-us-jdc" style="IBUITableViewCellStyleDefault" id="nFv-ez-j0W">
+                                        <rect key="frame" x="0.0" y="108" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nFv-ez-j0W" id="W8e-F6-A2l">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Am3-25-T4v">
+                                                    <frame key="frameInset" minX="139" minY="6" width="228" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="照片" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="X0X-us-jdc">
+                                                    <frame key="frameInset" minX="15" width="345" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="sEO-zc-C3z" style="IBUITableViewCellStyleDefault" id="Ogj-gd-ID0">
+                                        <rect key="frame" x="0.0" y="152" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ogj-gd-ID0" id="mVF-vp-ajh">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="igP-oo-c8u">
+                                                    <frame key="frameInset" minX="139" minY="6" width="228" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="書局地址" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sEO-zc-C3z">
+                                                    <frame key="frameInset" minX="15" width="345" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="3NN-jq-zcI" style="IBUITableViewCellStyleDefault" id="3JD-R8-Ezq">
+                                        <rect key="frame" x="0.0" y="196" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3JD-R8-Ezq" id="ju2-4f-YzD">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gtG-8q-ROQ">
+                                                    <frame key="frameInset" minX="139" minY="6" width="228" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="書局電話" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3NN-jq-zcI">
+                                                    <frame key="frameInset" minX="15" width="345" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="5ti-Jx-Y7t" style="IBUITableViewCellStyleDefault" id="SUO-lz-Rlq">
+                                        <rect key="frame" x="0.0" y="240" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SUO-lz-Rlq" id="vyd-fA-FaD">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OUa-DQ-D6j">
+                                                    <frame key="frameInset" minX="139" minY="6" width="228" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="書局網站" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5ti-Jx-Y7t">
+                                                    <frame key="frameInset" minX="15" width="345" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="lG9-GK-g4D" style="IBUITableViewCellStyleDefault" id="mq7-B8-xGF">
+                                        <rect key="frame" x="0.0" y="284" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mq7-B8-xGF" id="wG9-qo-C5j">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZgC-h4-qEm">
+                                                    <frame key="frameInset" minX="139" minY="6" width="228" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="書本簡介" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lG9-GK-g4D">
+                                                    <frame key="frameInset" minX="15" width="345" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="d5g-dT-rfU" id="ihb-6D-gRM"/>
+                            <outlet property="delegate" destination="d5g-dT-rfU" id="JIA-Ym-Gxp"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="bookCoverTextField" destination="Am3-25-T4v" id="UkM-cv-OhC"/>
+                        <outlet property="bookIntroTextField" destination="ZgC-h4-qEm" id="mXM-Hh-i9F"/>
+                        <outlet property="bookNameTextField" destination="PAg-zQ-A3v" id="9Dq-EO-3fv"/>
+                        <outlet property="shopAddrTextField" destination="igP-oo-c8u" id="EMr-eO-wZy"/>
+                        <outlet property="shopPhoneNumTextField" destination="gtG-8q-ROQ" id="KDy-Fx-Dr9"/>
+                        <outlet property="shopWebSiteTextField" destination="OUa-DQ-D6j" id="6E0-yw-giv"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NWs-Xy-GeV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1984.8" y="566.26686656671666"/>
         </scene>
         <!--Book Detail Table View Controller-->
         <scene sceneID="mda-rw-2ou">
@@ -97,6 +288,9 @@
                                                 <constraint firstItem="BNm-q5-Okh" firstAttribute="centerY" secondItem="wZF-6c-Ql0" secondAttribute="centerY" id="kRK-x1-Ppz"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="0d1-0i-C5C" kind="show" identifier="showBookCoverIdentifier" id="Mcn-f4-2Jm"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="81" id="kKN-PG-Nla">
                                         <rect key="frame" x="0.0" y="226" width="375" height="81"/>
@@ -114,6 +308,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="qcp-cI-kmV" kind="show" identifier="shopAddrIdentifier" id="iPm-eQ-QrP"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="81" id="i3g-Jy-ksp">
                                         <rect key="frame" x="0.0" y="307" width="375" height="81"/>
@@ -186,6 +383,70 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ExL-yE-aCa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1984.8" y="-154.27286356821591"/>
+        </scene>
+        <!--Shop Map View Controller-->
+        <scene sceneID="Y6W-f4-hBh">
+            <objects>
+                <viewController id="qcp-cI-kmV" customClass="ShopMapViewController" customModule="BookeeFinalExame" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iN5-Ju-Nfs"/>
+                        <viewControllerLayoutGuide type="bottom" id="4EI-11-z72"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="laX-ZV-oHL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e9F-O9-j6o"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="e9F-O9-j6o" secondAttribute="trailing" id="HLu-W5-wPz"/>
+                            <constraint firstItem="4EI-11-z72" firstAttribute="top" secondItem="e9F-O9-j6o" secondAttribute="bottom" id="W7q-yh-Ik4"/>
+                            <constraint firstItem="e9F-O9-j6o" firstAttribute="top" secondItem="iN5-Ju-Nfs" secondAttribute="bottom" id="haF-ec-i4L"/>
+                            <constraint firstItem="e9F-O9-j6o" firstAttribute="leading" secondItem="laX-ZV-oHL" secondAttribute="leadingMargin" id="sYU-9J-eRz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="e9F-O9-j6o" id="k0T-dH-lTG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="em2-X9-z87" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2780" y="566"/>
+        </scene>
+        <!--Book Cover View Controller-->
+        <scene sceneID="Fit-UQ-MA1">
+            <objects>
+                <viewController id="0d1-0i-C5C" customClass="BookCoverViewController" customModule="BookeeFinalExame" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SrV-be-UOj"/>
+                        <viewControllerLayoutGuide type="bottom" id="S1h-Yh-YyS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="R2Q-f6-e2P">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8Hl-7U-pFP">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="320" id="TDq-of-oGP"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="320" id="k1B-uh-7ac"/>
+                                    <constraint firstAttribute="width" constant="240" id="ueK-uF-8DN"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8Hl-7U-pFP" firstAttribute="centerX" secondItem="R2Q-f6-e2P" secondAttribute="centerX" id="c7z-xp-qAc"/>
+                            <constraint firstItem="8Hl-7U-pFP" firstAttribute="centerY" secondItem="R2Q-f6-e2P" secondAttribute="centerY" id="g8V-w3-X9A"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="coverImageView" destination="8Hl-7U-pFP" id="Coe-p3-MQC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qlQ-Q2-d74" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2780" y="-154.27286356821591"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="glK-go-j0g">

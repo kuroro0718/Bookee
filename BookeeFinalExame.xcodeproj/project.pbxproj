@@ -16,6 +16,10 @@
 		EBB584271DA771D10098B9C3 /* BookTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB584261DA771D10098B9C3 /* BookTableViewController.swift */; };
 		EBB584291DA778720098B9C3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EBB584281DA778720098B9C3 /* GoogleService-Info.plist */; };
 		EBB5842F1DA783EC0098B9C3 /* BookDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB5842E1DA783EC0098B9C3 /* BookDetailTableViewController.swift */; };
+		EBB584311DA78CC00098B9C3 /* CreateBookTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB584301DA78CC00098B9C3 /* CreateBookTableViewController.swift */; };
+		EBB584331DA797160098B9C3 /* BookCoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB584321DA797160098B9C3 /* BookCoverViewController.swift */; };
+		EBB584351DA79A230098B9C3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBB584341DA79A230098B9C3 /* MapKit.framework */; };
+		EBB584371DA79A330098B9C3 /* ShopMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB584361DA79A330098B9C3 /* ShopMapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,10 @@
 		EBB584261DA771D10098B9C3 /* BookTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTableViewController.swift; sourceTree = "<group>"; };
 		EBB584281DA778720098B9C3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EBB5842E1DA783EC0098B9C3 /* BookDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookDetailTableViewController.swift; sourceTree = "<group>"; };
+		EBB584301DA78CC00098B9C3 /* CreateBookTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateBookTableViewController.swift; sourceTree = "<group>"; };
+		EBB584321DA797160098B9C3 /* BookCoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookCoverViewController.swift; sourceTree = "<group>"; };
+		EBB584341DA79A230098B9C3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		EBB584361DA79A330098B9C3 /* ShopMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopMapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBB584351DA79A230098B9C3 /* MapKit.framework in Frameworks */,
 				C83C82944F20A6084EAB88C7 /* Pods_BookeeFinalExame.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -58,6 +67,7 @@
 		E3BDCDF55735F0A35719B6C3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EBB584341DA79A230098B9C3 /* MapKit.framework */,
 				2958F15B63647589373C4B18 /* Pods_BookeeFinalExame.framework */,
 			);
 			name = Frameworks;
@@ -88,7 +98,10 @@
 				EBB584241DA771400098B9C3 /* Book.swift */,
 				EBB584261DA771D10098B9C3 /* BookTableViewController.swift */,
 				EBB5842E1DA783EC0098B9C3 /* BookDetailTableViewController.swift */,
+				EBB584301DA78CC00098B9C3 /* CreateBookTableViewController.swift */,
+				EBB584321DA797160098B9C3 /* BookCoverViewController.swift */,
 				EBB584141DA76C100098B9C3 /* Main.storyboard */,
+				EBB584361DA79A330098B9C3 /* ShopMapViewController.swift */,
 				EBB584171DA76C100098B9C3 /* Assets.xcassets */,
 				EBB584191DA76C100098B9C3 /* LaunchScreen.storyboard */,
 				EBB584281DA778720098B9C3 /* GoogleService-Info.plist */,
@@ -134,6 +147,11 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 8H7X36TF25;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -223,9 +241,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBB584111DA76C100098B9C3 /* AppDelegate.swift in Sources */,
+				EBB584331DA797160098B9C3 /* BookCoverViewController.swift in Sources */,
 				EBB584271DA771D10098B9C3 /* BookTableViewController.swift in Sources */,
+				EBB584311DA78CC00098B9C3 /* CreateBookTableViewController.swift in Sources */,
 				EBB584251DA771400098B9C3 /* Book.swift in Sources */,
 				EBB5842F1DA783EC0098B9C3 /* BookDetailTableViewController.swift in Sources */,
+				EBB584371DA79A330098B9C3 /* ShopMapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

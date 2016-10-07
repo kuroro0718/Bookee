@@ -35,5 +35,20 @@ class BookDetailTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    // MARK: - Table view data source
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let identifier = segue.identifier {
+            switch identifier {
+            case "showBookCoverIdentifier":
+                let vc = segue.destinationViewController as! BookCoverViewController
+                vc.image = bookCoverImage.image
+            case "shopAddrIdentifier":
+                let vc = segue.destinationViewController as! ShopMapViewController
+                vc.address = shopAddrLabel.text
+                vc.shopName = bookNameLabel.text
+            default:
+                break
+            }
+        }
+
+    }
 }

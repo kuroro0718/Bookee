@@ -10,16 +10,15 @@ import UIKit
 import Firebase
 
 class BookTableViewController: UITableViewController {
-
-    var books = [Book]()
-    
-    
     @IBOutlet var bookTableView: UITableView!
+    
+    var books = [Book]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         FIRApp.configure()
         initBooks()
+//        loadDataFromFirebase()
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,7 +27,18 @@ class BookTableViewController: UITableViewController {
     }
     
     // MARK: - Table view data source
-
+    
+//    func loadDataFromFirebase() {
+//        let rootRef = FIRDatabase.database().reference()
+//        
+//        rootRef.child("Book").observeEventType(.Value, withBlock: {
+//            (snapshot) in
+//            let dict = snapshot.value
+//            print(dict)
+//        })
+//
+//    }
+    
     func initBooks() {
         let book1 = Book(name: "莊子", shopAddress: "台北市松山區復興南路一段39號", shopPhoneNum: 26535588, shopWebSite: "http://www.books.com.tw/products/0010730704?loc=P_003_1_002", introduction: "身心的安定，是面對混亂的時代最有力量的武器，以淺顯的語言，契合現代生活的事例，解讀莊子的治身心之道", imageName: "chung")
      
