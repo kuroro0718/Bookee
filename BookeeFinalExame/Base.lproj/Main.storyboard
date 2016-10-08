@@ -277,13 +277,24 @@
                                     <outletCollection property="gestureRecognizers" destination="JCp-jb-Ctd" appends="YES" id="Fuc-x6-p1h"/>
                                 </connections>
                             </label>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SlZ-gB-wek">
+                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="pQc-LH-9UK" appends="YES" id="A7L-n6-2iA"/>
+                                </connections>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="SlZ-gB-wek" firstAttribute="top" secondItem="pWw-BD-7W3" secondAttribute="bottom" constant="35" id="9bz-sb-pWs"/>
                             <constraint firstItem="7wN-i1-kxc" firstAttribute="top" secondItem="phz-H9-0tZ" secondAttribute="bottom" constant="8" id="Afg-Mi-iuJ"/>
                             <constraint firstItem="qVM-WN-e95" firstAttribute="centerY" secondItem="7wN-i1-kxc" secondAttribute="centerY" id="Gre-Kq-Yk3"/>
                             <constraint firstItem="pWw-BD-7W3" firstAttribute="top" secondItem="7wN-i1-kxc" secondAttribute="bottom" constant="30" id="Lh3-gt-w2g"/>
                             <constraint firstItem="qVM-WN-e95" firstAttribute="leading" secondItem="7wN-i1-kxc" secondAttribute="trailing" constant="30" id="eGy-N3-hbN"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="SlZ-gB-wek" secondAttribute="leading" id="fa4-va-zrf"/>
                             <constraint firstAttribute="leadingMargin" secondItem="pWw-BD-7W3" secondAttribute="leading" id="hy1-0T-RtI"/>
                             <constraint firstItem="7wN-i1-kxc" firstAttribute="leading" secondItem="9vj-7E-iGm" secondAttribute="leadingMargin" id="kQg-wD-3Be"/>
                         </constraints>
@@ -292,6 +303,7 @@
                         <outlet property="bookNameLabel" destination="qVM-WN-e95" id="VJA-7w-H2y"/>
                         <outlet property="coverImageView" destination="7wN-i1-kxc" id="ko7-Zq-FJf"/>
                         <outlet property="shopAddrLabel" destination="pWw-BD-7W3" id="KZ7-JD-3OL"/>
+                        <outlet property="shopPhoneNumLabel" destination="SlZ-gB-wek" id="giJ-oC-gT9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0aN-ed-lJ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -303,6 +315,11 @@
                 <tapGestureRecognizer id="JCp-jb-Ctd">
                     <connections>
                         <segue destination="qcp-cI-kmV" kind="show" identifier="showShopMap" id="xZz-wg-D66"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="pQc-LH-9UK">
+                    <connections>
+                        <action selector="shopPhoneNumTap:" destination="mLQ-u3-RHr" id="wya-cd-vys"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

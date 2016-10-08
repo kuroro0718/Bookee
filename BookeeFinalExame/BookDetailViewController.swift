@@ -14,6 +14,7 @@ class BookDetailViewController: UIViewController {
     @IBOutlet weak var bookNameLabel: UILabel!
     @IBOutlet weak var shopAddrLabel: UILabel!
     
+    @IBOutlet weak var shopPhoneNumLabel: UILabel!
     var book: Book?
     
     override func viewDidLoad() {
@@ -22,6 +23,7 @@ class BookDetailViewController: UIViewController {
         coverImageView.image = UIImage(named: (book?.imageName)!)
         bookNameLabel.text = book?.name
         shopAddrLabel.text = "書局地址: \((book?.shopAddress)!)"
+        shopPhoneNumLabel.text = "書局電話: \((book?.shopPhoneNum)!)"
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,4 +46,7 @@ class BookDetailViewController: UIViewController {
         }
     }
     
+    @IBAction func shopPhoneNumTap(sender: AnyObject) {
+        UIApplication.sharedApplication().openURL(NSURL(string: "tel://\((book?.shopPhoneNum)!)")!, options: [:], completionHandler: nil)
+    }
 }
