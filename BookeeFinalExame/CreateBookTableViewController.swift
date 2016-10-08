@@ -9,6 +9,10 @@
 import UIKit
 import Firebase
 
+protocol CreateBookDataDelegate {
+    func addBook(book: Book)
+}
+
 class CreateBookTableViewController: UITableViewController {
 
     @IBOutlet weak var bookNameTextField: UITextField!    
@@ -19,9 +23,11 @@ class CreateBookTableViewController: UITableViewController {
     @IBOutlet weak var bookIntroTextField: UITextField!
     
     var book: Book?
+    var delegate: CreateBookDataDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        presentedViewController
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,6 +46,7 @@ class CreateBookTableViewController: UITableViewController {
         book = Book(name: name!, shopAddress: address!, shopPhoneNum: phoneNum!, shopWebSite: webSite!, introduction: intro!, imageName: image!)
         
         uploadBookInfoToFirebase()
+        self.delegate?.addBook(book!)
         self.navigationController?.popViewControllerAnimated(true)
     }
 
@@ -48,14 +55,13 @@ class CreateBookTableViewController: UITableViewController {
         let bookRef = rootRef.child("Book")
         
         if let newBook = book {
-            let autoRef = bookRef.childByAutoId()
-            let detailRef = autoRef.child(newBook.name!)
+            let detailRef = bookRef.child(newBook.name!)
             
-            detailRef.child("書本介紹").setValue(newBook.introduction!)
-            detailRef.child("書本介紹").setValue(newBook.imageName!)
-            detailRef.child("書局地址").setValue(newBook.shopAddress!)
-            detailRef.child("書局電話").setValue(newBook.shopPhoneNum)
-            detailRef.child("書局網站").setValue(newBook.shopWebSite!)
+            detailRef.child("introduction").setValue(newBook.introduction!)
+            detailRef.child("cover").setValue(newBook.imageName!)
+            detailRef.child("shop address").setValue(newBook.shopAddress!)
+            detailRef.child("shop phone").setValue(newBook.shopPhoneNum)
+            detailRef.child("shop website").setValue(newBook.shopWebSite!)
         }
     }
 }

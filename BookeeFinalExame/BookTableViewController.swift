@@ -19,9 +19,6 @@ class BookTableViewController: UITableViewController {
         super.viewDidLoad()
         FIRApp.configure()
         rootRef = FIRDatabase.database().reference()
-    }
-    
-    override func viewWillAppear(animated: Bool) {
         loadDataFromFirebase()
     }
 
@@ -30,28 +27,26 @@ class BookTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(animated: Bool) {
+        tableView.reloadData()
+    }
+    
     func loadDataFromFirebase() {
         let bookRef = self.rootRef!.child("Book")
         bookRef.observeSingleEventOfType(.Value, withBlock:  {
             (snapshot) in
-            if let result = snapshot.children.allObjects as? [FIRDataSnapshot] {
-                for child in result {
-                    let dataDict = child.value as! [String: AnyObject]
-                    for (bookName, bookDict) in dataDict {
-                        let bookData = bookDict as! [String: AnyObject]
-                        
-                        let address = bookData["shop address"]! as! String
-                        let phoneNum = bookData["shop phone"]! as! Int
-                        let shopWebsite = bookData["shop website"]! as! String
-                        let introduction = bookData["introduction"]! as! String
-                        let imageName = bookData["cover"]! as! String
-                        
-                        let book = Book(name: bookName, shopAddress: address, shopPhoneNum: phoneNum, shopWebSite: shopWebsite, introduction: introduction, imageName: imageName)
-                        
-                        self.books.append(book)
-                        self.tableView.reloadData()
-                    }
-                }
+            let bookDict = snapshot.value as! [String: AnyObject]
+            for (bookName, bookData) in bookDict {
+                let address = bookData["shop address"]! as! String
+                let phoneNum = bookData["shop phone"]! as! Int
+                let shopWebsite = bookData["shop website"]! as! String
+                let introduction = bookData["introduction"]! as! String
+                let imageName = bookData["cover"]! as! String
+                
+                let book = Book(name: bookName, shopAddress: address, shopPhoneNum: phoneNum, shopWebSite: shopWebsite, introduction: introduction, imageName: imageName)
+                
+                self.books.append(book)
+                self.tableView.reloadData()
             }
         })
     }
@@ -77,7 +72,15 @@ class BookTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
-            books.removeAtIndex(indexPath.row)            
+            let removedBook = books.removeAtIndex(indexPath.row)
+            
+            // Remove Firebase data
+            rootRef?.child("Book").child(removedBook.name!).removeValueWithCompletionBlock({ (error, ref) in
+                if error != nil {
+                    print("Failed to remove data", error)
+                    return
+                }
+            })
             
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
             tableView.reloadData()
@@ -90,6 +93,15 @@ class BookTableViewController: UITableViewController {
             if let cell = sender as? UITableViewCell, let indexPath = bookTableView.indexPathForCell(cell) {
                 vc.book = books[indexPath.row]
             }
+        } else if segue.identifier == "addNewBookIdentifier" {
+            let vc = segue.destinationViewController as! CreateBookTableViewController
+            vc.delegate = self
         }
+    }
+}
+
+extension BookTableViewController: CreateBookDataDelegate {
+    func addBook(book: Book) {
+        self.books.insert(book, atIndex: 0)
     }
 }
