@@ -103,7 +103,7 @@ class BookTableViewController: UITableViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showBookDetail" {
-            let vc = segue.destinationViewController as! BookDetailTableViewController
+            let vc = segue.destinationViewController as! BookDetailViewController
             if let cell = sender as? UITableViewCell, let indexPath = bookTableView.indexPathForCell(cell) {
                 vc.book = books[indexPath.row]
             }
