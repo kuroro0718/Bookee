@@ -10,6 +10,7 @@ import UIKit
 
 class BookDetailViewController: UIViewController {
 
+    @IBOutlet weak var shopWebSiteLabel: UILabel!
     @IBOutlet weak var coverImageView: UIImageView!
     @IBOutlet weak var bookNameLabel: UILabel!
     @IBOutlet weak var shopAddrLabel: UILabel!
@@ -24,6 +25,7 @@ class BookDetailViewController: UIViewController {
         bookNameLabel.text = book?.name
         shopAddrLabel.text = "書局地址: \((book?.shopAddress)!)"
         shopPhoneNumLabel.text = "書局電話: \((book?.shopPhoneNum)!)"
+        shopWebSiteLabel.text = "書局網站: \((book?.shopWebSite)!)"
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,5 +50,10 @@ class BookDetailViewController: UIViewController {
     
     @IBAction func shopPhoneNumTap(sender: AnyObject) {
         UIApplication.sharedApplication().openURL(NSURL(string: "tel://\((book?.shopPhoneNum)!)")!, options: [:], completionHandler: nil)
+    }
+    
+    @IBAction func shopWebSiteTap(sender: AnyObject) {
+        let url = NSURL(string: (book?.shopWebSite)!)
+        UIApplication.sharedApplication().openURL(url!, options: [:], completionHandler: nil)
     }
 }

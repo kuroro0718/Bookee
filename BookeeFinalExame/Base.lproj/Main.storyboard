@@ -286,16 +286,27 @@
                                     <outletCollection property="gestureRecognizers" destination="pQc-LH-9UK" appends="YES" id="A7L-n6-2iA"/>
                                 </connections>
                             </label>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sus-PP-J20">
+                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="fzH-iF-1Oo" appends="YES" id="f9w-sv-oF1"/>
+                                </connections>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="SlZ-gB-wek" firstAttribute="top" secondItem="pWw-BD-7W3" secondAttribute="bottom" constant="35" id="9bz-sb-pWs"/>
                             <constraint firstItem="7wN-i1-kxc" firstAttribute="top" secondItem="phz-H9-0tZ" secondAttribute="bottom" constant="8" id="Afg-Mi-iuJ"/>
                             <constraint firstItem="qVM-WN-e95" firstAttribute="centerY" secondItem="7wN-i1-kxc" secondAttribute="centerY" id="Gre-Kq-Yk3"/>
+                            <constraint firstItem="Sus-PP-J20" firstAttribute="top" secondItem="SlZ-gB-wek" secondAttribute="bottom" constant="28" id="KZr-qI-wq8"/>
                             <constraint firstItem="pWw-BD-7W3" firstAttribute="top" secondItem="7wN-i1-kxc" secondAttribute="bottom" constant="30" id="Lh3-gt-w2g"/>
                             <constraint firstItem="qVM-WN-e95" firstAttribute="leading" secondItem="7wN-i1-kxc" secondAttribute="trailing" constant="30" id="eGy-N3-hbN"/>
                             <constraint firstAttribute="leadingMargin" secondItem="SlZ-gB-wek" secondAttribute="leading" id="fa4-va-zrf"/>
                             <constraint firstAttribute="leadingMargin" secondItem="pWw-BD-7W3" secondAttribute="leading" id="hy1-0T-RtI"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Sus-PP-J20" secondAttribute="leading" id="igE-Pt-Pxo"/>
                             <constraint firstItem="7wN-i1-kxc" firstAttribute="leading" secondItem="9vj-7E-iGm" secondAttribute="leadingMargin" id="kQg-wD-3Be"/>
                         </constraints>
                     </view>
@@ -304,6 +315,7 @@
                         <outlet property="coverImageView" destination="7wN-i1-kxc" id="ko7-Zq-FJf"/>
                         <outlet property="shopAddrLabel" destination="pWw-BD-7W3" id="KZ7-JD-3OL"/>
                         <outlet property="shopPhoneNumLabel" destination="SlZ-gB-wek" id="giJ-oC-gT9"/>
+                        <outlet property="shopWebSiteLabel" destination="Sus-PP-J20" id="dRf-z2-bnU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0aN-ed-lJ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -320,6 +332,11 @@
                 <tapGestureRecognizer id="pQc-LH-9UK">
                     <connections>
                         <action selector="shopPhoneNumTap:" destination="mLQ-u3-RHr" id="wya-cd-vys"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="fzH-iF-1Oo">
+                    <connections>
+                        <action selector="shopWebSiteTap:" destination="mLQ-u3-RHr" id="Awu-3x-8cs"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
