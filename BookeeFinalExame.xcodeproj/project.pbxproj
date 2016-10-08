@@ -73,6 +73,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		EB0E121B1DA8903A0099126B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EBB584261DA771D10098B9C3 /* BookTableViewController.swift */,
+				EBB584301DA78CC00098B9C3 /* CreateBookTableViewController.swift */,
+				EBB584321DA797160098B9C3 /* BookCoverViewController.swift */,
+				EBB584361DA79A330098B9C3 /* ShopMapViewController.swift */,
+				EBF3846E1DA7CF74004EB987 /* BookDetailViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		EB0E121C1DA8904A0099126B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EBB584241DA771400098B9C3 /* Book.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		EBB584041DA76C100098B9C3 = {
 			isa = PBXGroup;
 			children = (
@@ -94,14 +114,10 @@
 		EBB5840F1DA76C100098B9C3 /* BookeeFinalExame */ = {
 			isa = PBXGroup;
 			children = (
+				EB0E121C1DA8904A0099126B /* Model */,
+				EB0E121B1DA8903A0099126B /* Controller */,
 				EBB584101DA76C100098B9C3 /* AppDelegate.swift */,
-				EBB584241DA771400098B9C3 /* Book.swift */,
-				EBB584261DA771D10098B9C3 /* BookTableViewController.swift */,
-				EBB584301DA78CC00098B9C3 /* CreateBookTableViewController.swift */,
-				EBB584321DA797160098B9C3 /* BookCoverViewController.swift */,
 				EBB584141DA76C100098B9C3 /* Main.storyboard */,
-				EBB584361DA79A330098B9C3 /* ShopMapViewController.swift */,
-				EBF3846E1DA7CF74004EB987 /* BookDetailViewController.swift */,
 				EBB584171DA76C100098B9C3 /* Assets.xcassets */,
 				EBB584191DA76C100098B9C3 /* LaunchScreen.storyboard */,
 				EBB584281DA778720098B9C3 /* GoogleService-Info.plist */,
@@ -290,6 +306,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -339,6 +356,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
