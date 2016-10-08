@@ -10,12 +10,13 @@ import UIKit
 
 class BookDetailViewController: UIViewController {
 
+    @IBOutlet weak var bookIntroTextView: UITextView!
     @IBOutlet weak var shopWebSiteLabel: UILabel!
     @IBOutlet weak var coverImageView: UIImageView!
     @IBOutlet weak var bookNameLabel: UILabel!
     @IBOutlet weak var shopAddrLabel: UILabel!
-    
     @IBOutlet weak var shopPhoneNumLabel: UILabel!
+    
     var book: Book?
     
     override func viewDidLoad() {
@@ -26,6 +27,7 @@ class BookDetailViewController: UIViewController {
         shopAddrLabel.text = "書局地址: \((book?.shopAddress)!)"
         shopPhoneNumLabel.text = "書局電話: \((book?.shopPhoneNum)!)"
         shopWebSiteLabel.text = "書局網站: \((book?.shopWebSite)!)"
+        bookIntroTextView.text = book?.introduction
     }
 
     override func didReceiveMemoryWarning() {

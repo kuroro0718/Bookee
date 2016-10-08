@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -295,22 +296,33 @@
                                     <outletCollection property="gestureRecognizers" destination="fzH-iF-1Oo" appends="YES" id="f9w-sv-oF1"/>
                                 </connections>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZOf-C2-8Ht">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="SlZ-gB-wek" firstAttribute="top" secondItem="pWw-BD-7W3" secondAttribute="bottom" constant="35" id="9bz-sb-pWs"/>
                             <constraint firstItem="7wN-i1-kxc" firstAttribute="top" secondItem="phz-H9-0tZ" secondAttribute="bottom" constant="8" id="Afg-Mi-iuJ"/>
                             <constraint firstItem="qVM-WN-e95" firstAttribute="centerY" secondItem="7wN-i1-kxc" secondAttribute="centerY" id="Gre-Kq-Yk3"/>
+                            <constraint firstItem="ZOf-C2-8Ht" firstAttribute="height" secondItem="9vj-7E-iGm" secondAttribute="height" multiplier="0.3" id="III-dC-sPt"/>
                             <constraint firstItem="Sus-PP-J20" firstAttribute="top" secondItem="SlZ-gB-wek" secondAttribute="bottom" constant="28" id="KZr-qI-wq8"/>
                             <constraint firstItem="pWw-BD-7W3" firstAttribute="top" secondItem="7wN-i1-kxc" secondAttribute="bottom" constant="30" id="Lh3-gt-w2g"/>
+                            <constraint firstItem="ZOf-C2-8Ht" firstAttribute="width" secondItem="9vj-7E-iGm" secondAttribute="width" multiplier="0.9" id="b6j-hY-v69"/>
                             <constraint firstItem="qVM-WN-e95" firstAttribute="leading" secondItem="7wN-i1-kxc" secondAttribute="trailing" constant="30" id="eGy-N3-hbN"/>
                             <constraint firstAttribute="leadingMargin" secondItem="SlZ-gB-wek" secondAttribute="leading" id="fa4-va-zrf"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="ZOf-C2-8Ht" secondAttribute="leading" id="gl5-SJ-ZPH"/>
                             <constraint firstAttribute="leadingMargin" secondItem="pWw-BD-7W3" secondAttribute="leading" id="hy1-0T-RtI"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Sus-PP-J20" secondAttribute="leading" id="igE-Pt-Pxo"/>
                             <constraint firstItem="7wN-i1-kxc" firstAttribute="leading" secondItem="9vj-7E-iGm" secondAttribute="leadingMargin" id="kQg-wD-3Be"/>
+                            <constraint firstItem="ZOf-C2-8Ht" firstAttribute="top" secondItem="Sus-PP-J20" secondAttribute="bottom" constant="22" id="upz-4s-Lsd"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bookIntroTextView" destination="ZOf-C2-8Ht" id="JAB-i1-b7a"/>
                         <outlet property="bookNameLabel" destination="qVM-WN-e95" id="VJA-7w-H2y"/>
                         <outlet property="coverImageView" destination="7wN-i1-kxc" id="ko7-Zq-FJf"/>
                         <outlet property="shopAddrLabel" destination="pWw-BD-7W3" id="KZ7-JD-3OL"/>
@@ -340,7 +352,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1985" y="-863"/>
+            <point key="canvasLocation" x="1984.8" y="-863.1184407796103"/>
         </scene>
         <!--Book Detail Table View Controller-->
         <scene sceneID="mda-rw-2ou">
